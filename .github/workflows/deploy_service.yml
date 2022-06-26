@@ -1,6 +1,5 @@
 - name: Checkout private tools
-  uses: actions/checkout@v3
+  uses: actions/checkout@master
   with:
     repository: https://git.toptal.com/raj/violeta.iskandaryan.git
     token: ${{ secrets.ACCESS_TOKEN }}
-
