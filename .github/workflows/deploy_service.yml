@@ -1,0 +1,4 @@
+- uses: actions/checkout@v1
+  with:
+    repository: my-private/repo-name
+    token: ${{ secrets.ACCESS_TOKEN }}
