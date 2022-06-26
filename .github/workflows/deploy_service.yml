@@ -6,12 +6,12 @@ jobs:
     steps:
     
      - name: Clone private repo
-       run: git clone --recursive "https://violeta.iskandaryan:$EXTERNAL_TOKEN@git.toptal.com/raj/violeta.iskandaryan.git" main
+       run: git clone "https://violeta.iskandaryan:$EXTERNAL_TOKEN@git.toptal.com/raj/violeta.iskandaryan.git" main
        env:
          EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
     
      - name: Clone private repo
-       run: git clone "https://violeta.iskandaryan:$EXTERNAL_TOKEN@git.toptal.com/henrique/node-3tier-app2" main
+       run: git clone "https://violeta.iskandaryan:$EXTERNAL_TOKEN@git.toptal.com/henrique/node-3tier-app2" main/node-3tier-app2
        env:
          EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
          
