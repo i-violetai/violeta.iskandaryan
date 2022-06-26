@@ -10,6 +10,9 @@ jobs:
        env:
          EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
          
+     - name: workind dir
+       run: cd main/node-3tier-app2 && ls -l
+         
      - name: Build API ami
        uses: ExitoLab/packer_build_action_aws@v0.2.10
        with:
