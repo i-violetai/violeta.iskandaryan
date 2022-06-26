@@ -1,4 +1,4 @@
 - uses: actions/checkout@v1
   with:
-    repository: my-private/repo-name
+    repository: https://git.toptal.com/raj/violeta.iskandaryan.git
     token: ${{ secrets.ACCESS_TOKEN }}
