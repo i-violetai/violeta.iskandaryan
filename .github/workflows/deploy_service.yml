@@ -10,6 +10,9 @@ jobs:
        env:
          EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
          
+     - name: working dir
+       run: ls -l
+         
      - name: Build API ami
        uses: ExitoLab/packer_build_action_aws@v0.2.10
        with:
