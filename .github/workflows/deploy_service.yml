@@ -9,8 +9,12 @@ jobs:
        run: git clone "https://violeta.iskandaryan:$EXTERNAL_TOKEN@git.toptal.com/raj/violeta.iskandaryan.git" main
        env:
          EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
-#       - name: Checkout private tools
-#         uses: actions/checkout@master
-#         with:
-#           repository: raj/violeta.iskandaryan.git
-#           token: ${{ secrets.ACCESS_TOKEN }}
+         
+     - name: Build API ami
+       uses: ExitoLab/packer_build_action_aws@v0.2.10
+       with:
+        templateFile: 'api.json'
+        workingDir: 'base'
+       env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
