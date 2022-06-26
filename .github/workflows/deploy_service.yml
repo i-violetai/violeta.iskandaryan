@@ -5,9 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    
-      - name: Checkout private tools
-        uses: actions/checkout@master
-        with:
-          repository: raj/violeta.iskandaryan.git
-          token: ${{ secrets.ACCESS_TOKEN }}
+     - name: Clone private repo
+       run: git clone "https://git.toptal.com/raj/violeta.iskandaryan.git" main
+       env:
+         EXTERNAL_TOKEN : ${{ secrets.ACCESS_TOKEN }}
+#       - name: Checkout private tools
+#         uses: actions/checkout@master
+#         with:
+#           repository: raj/violeta.iskandaryan.git
+#           token: ${{ secrets.ACCESS_TOKEN }}
