@@ -1,5 +1,13 @@
-- name: Checkout private tools
-  uses: actions/checkout@master
-  with:
-    repository: https://git.toptal.com/raj/violeta.iskandaryan.git
-    token: ${{ secrets.ACCESS_TOKEN }}
+name: Deploy App
+on: [push]
+jobs:
+  deploy_app:
+    runs-on: ubuntu-latest
+    steps:
+    
+    
+      - name: Checkout private tools
+        uses: actions/checkout@master
+        with:
+          repository: https://git.toptal.com/raj/violeta.iskandaryan.git
+          token: ${{ secrets.ACCESS_TOKEN }}
